@@ -12,12 +12,23 @@ class ThreadsIndexItem extends Component {
 
   render() {
     return (
-      <View>
-        <Text>{ this.props.thread.no }</Text>
-        <Text>{ this.props.thread.last_modified }</Text>
+      <View style={ styles.container }>
+        <Text>#{ this.props.thread.no }</Text>
+        <Text style={ styles.grey }>
+          { new Date(this.props.thread.last_modified).toTimeString() }
+        </Text>
       </View>
     );
   }
 };
+
+const styles = StyleSheet.create({
+  container: {
+    marginBottom: 8,
+  },
+  grey: {
+    color: '#bbb',
+  }
+});
 
 export default ThreadsIndexItem;

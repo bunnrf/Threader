@@ -18,7 +18,7 @@ class ThreadsIndex extends Component {
 
   render() {
     return (
-      <View>
+      <View style={ styles.container }>
         <ScrollView>
           { this.props.threads && this.props.threads.map(thread => {
             return <ThreadsIndexItem key={ thread.no } thread={ thread } />;
@@ -28,5 +28,11 @@ class ThreadsIndex extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    top: 55,
+  },
+});
 
 export default ThreadsIndex;
