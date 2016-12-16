@@ -1,7 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * RF Bunn
+ * 4chan api demo
  */
 
 import React, { Component } from 'react';

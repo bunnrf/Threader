@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Router, Scene } from 'react-native-router-flux';
 
-import ThreadsIndexContainer from './components/threads_index_container';
-import ThreadContainer from './components/thread_container';
+import ThreadsIndexContainer from './components/threads/threads_index_container';
+import ThreadContainer from './components/threads/thread_container';
 
 class AppRouter extends Component {
   render() {

@@ -1,7 +1,7 @@
 import { ThreadsConstants, ThreadsActions } from '../actions/threads_actions';
-import { fetchThreads } from '..util/threads_api_util';
+import { fetchThreads } from '../util/threads_api_util';
 
-const ThreadsMiddleware = ({ dispatch }) => next => actions => {
+const ThreadsMiddleware = ({ dispatch }) => next => action => {
   let success;
   let errors;
 
