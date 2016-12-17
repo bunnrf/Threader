@@ -17,7 +17,6 @@ class ThreadsIndex extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <View style={ styles.container }>
         <ScrollView>
@@ -32,7 +31,7 @@ class ThreadsIndex extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    top: 55,
+    top: 58,
   },
 });
 

@@ -9,8 +9,7 @@ const ThreadsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ThreadsConstants.RECEIVE_THREADS:
       // JSON returns array of pages, which have a threads array
-      const threads = flatten(action.threads.map(page => page.threads));
-      console.log(threads);
+      const threads = flatten(action.threads.map(page => page.threads)).slice(80);
       return threads;
     case ThreadsConstants.RECEIVE_THREAD:
       return merge({}, state, thread);
