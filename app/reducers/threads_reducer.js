@@ -1,5 +1,6 @@
 import { ThreadsConstants, ThreadsActions } from '../actions/threads_actions';
-import { flatten } from '../util/util';
+import flatten from 'lodash/flatten';
+import merge from 'lodash/merge';
 
 const defaultState = [];
 
@@ -8,7 +9,11 @@ const ThreadsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ThreadsConstants.RECEIVE_THREADS:
       // JSON returns array of pages, which have a threads array
-      return flatten(action.threads.map(page => page.threads));
+      const threads = flatten(action.threads.map(page => page.threads));
+      console.log(threads);
+      return threads;
+    case ThreadsConstants.RECEIVE_THREAD:
+      return merge({}, state, thread);
     default:
       return state;
   }
